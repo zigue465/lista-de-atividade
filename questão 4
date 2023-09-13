@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class SalariosMinimos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar ao usuário que insira o valor do salário mínimo
+        System.out.print("Digite o valor do salário mínimo (em reais): ");
+        double salarioMinimo = scanner.nextDouble();
+
+        // Solicitar ao usuário que insira o valor do salário do usuário
+        System.out.print("Digite o valor do salário do usuário (em reais): ");
+        double salarioUsuario = scanner.nextDouble();
+
+        // Calcular a quantidade de salários mínimos que o usuário ganha
+        double quantidadeSalariosMinimos = calcularQuantidadeSalariosMinimos(salarioMinimo, salarioUsuario);
+
+        // Imprimir o resultado
+        System.out.println("O usuário ganha aproximadamente " + quantidadeSalariosMinimos + " salários mínimos.");
+
+        scanner.close();
+    }
+
+    public static double calcularQuantidadeSalariosMinimos(double salarioMinimo, double salarioUsuario) {
+        // Calcular a quantidade de salários mínimos
+        double quantidadeSalariosMinimos = salarioUsuario / salarioMinimo;
+        return quantidadeSalariosMinimos;
+    }
+}
