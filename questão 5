@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class AntecessorESucessor {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar ao usuário que insira um número inteiro
+        System.out.print("Digite um número inteiro: ");
+        int numero = scanner.nextInt();
+
+        // Calcular o antecessor e o sucessor
+        int antecessor = numero - 1;
+        int sucessor = numero + 1;
+
+        // Imprimir os resultados
+        System.out.println("O antecessor de " + numero + " é: " + antecessor);
+        System.out.println("O sucessor de " + numero + " é: " + sucessor);
+
+        scanner.close();
+    }
+}
