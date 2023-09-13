@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class SaldoComReajuste {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar ao usuário que insira o saldo
+        System.out.print("Digite o saldo atual: ");
+        double saldo = scanner.nextDouble();
+
+        // Calcular o saldo com reajuste de 1%
+        double saldoComReajuste = calcularSaldoComReajuste(saldo);
+
+        // Imprimir o saldo com reajuste
+        System.out.println("O saldo com reajuste de 1% é: " + saldoComReajuste);
+
+        scanner.close();
+    }
+
+    public static double calcularSaldoComReajuste(double saldo) {
+        // Calcular o saldo com reajuste de 1%
+        double reajuste = saldo * 0.01;
+        double saldoComReajuste = saldo + reajuste;
+        return saldoComReajuste;
+    }
+}
